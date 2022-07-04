@@ -21,18 +21,18 @@ public class RacketController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.LeftArrow) == true)
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            //transform.Translate(Vector3.left * speed * Time.deltaTime);
 
             //  Rigidbody 물리엔진을 이용한 이동
-            //racketRd.AddForce(-speed, 0, 0);
+            racketRd.AddForce(-speed, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.RightArrow) == true)
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            //transform.Translate(Vector3.right * speed * Time.deltaTime);
 
             //  Rigidbody 물리엔진을 이용한 이동
-            //racketRd.AddForce(+speed, 0, 0);
+            racketRd.AddForce(+speed, 0, 0);
         }
     }
 
